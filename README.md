@@ -7,5 +7,6 @@
   -Install lis_ros_pkg  
 
 ##---How to use---
-Give execute permission to baxter_installer.sh and Run as administrator
+Give execute permission to baxter_installer.sh 
+Run baxter_installer.sh 
 
