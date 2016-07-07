@@ -46,6 +46,7 @@ echo "*************************************************************"
 echo "Rewrite baxter_hostname in ~/ros_ws/baxter.sh line 22"
 echo "Our baxter host name is \"011312P0018.local\""
 echo "*************************************************************"
+echo -n "Did you end editing? [y/n] > "
 while :
 do
   read INPUT
@@ -59,6 +60,7 @@ done
 echo "*************************************************************"
 echo "Rewrite your_ip in ~/ros_ws/baxter.sh line 26"
 echo "*************************************************************"
+echo -n "Did you end editing? [y/n] > "
 while :
 do
   read INPUT
@@ -86,6 +88,7 @@ echo "*************************************************************"
 echo "Rewrite ros_version in ~/ros_ws/baxter.sh line 30"
 echo "Our ros version is \"groovy\""
 echo "*************************************************************"
+echo -n "Did you end editing? [y/n] > "
 while :
 do
   read INPUT
@@ -114,8 +117,12 @@ done
 echo "lis_package"
 cd ~/catkin_ws/src
 git clone https://github.com/ISBaxterGroup/lis-ros-pkg.git
+echo "lis_package-copy"
+cd ~/catkin_ws/
+mkdir -p ~/catkin_ws/devel/include/lis_msgs/
 cp ~/catkin_ws/src/lis-ros-pkg/lis_msgs/include/lis.h ~/catkin_ws/devel/include/lis_msgs/
 cp ~/catkin_ws/src/lis-ros-pkg/lis_msgs/include/msg_helpers.h ~/catkin_ws/devel/include/
+echo "lis_package-remov"
 mv ~/catkin_ws/src/lis-ros-pkg/* ~/catkin_ws/src/
 sudo rm -r lis-ros-pkg
 
