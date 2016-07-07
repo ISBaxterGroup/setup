@@ -71,7 +71,7 @@ do
   esac
 done  
 echo "*************************************************************"
-echo "Append the following sentence to the next Line of your_ip"
+echo "Append the following sentence to the next Line of your_ip (line 26)"
 echo "source ~/catkin_ws/devel/setup.bash"
 echo "*************************************************************"
 echo -n "Did you end editing? [y/n] > "
@@ -100,7 +100,7 @@ do
 done  
 echo "*************************************************************"
 echo "Append the following sentence to ~/ros_ws/baxter.sh line 153"
-echo -e ",to the next of \"# source the catkin setup bash script\"\nsource devel/setup.bash"
+echo -e ",to the next of \"# source the catkin setup bash script\nsource devel/setup.bash\""
 echo "source ~/.bashrc"
 echo "*************************************************************"
 echo -n "Did you end editing? [y/n] > "
