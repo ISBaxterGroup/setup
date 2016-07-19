@@ -6,8 +6,10 @@
   - Setup workspace  
   - Setup Baxter.sh  
   - Install lis_ros_pkg  
-
-##---How to use---
-Give execute permission to baxter_installer.sh 
-Run baxter_installer.sh 
+- realsense_camera_installer.sh
+  -  Install realsense_camera
+  -  
+##Usage
+Give execute permission to ~.sh 
+Run ~.sh 
 
