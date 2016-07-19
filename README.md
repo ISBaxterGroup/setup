@@ -7,8 +7,8 @@
   - Setup Baxter.sh  
   - Install lis_ros_pkg  
 - realsense_camera_installer.sh
-  -  Install realsense_camera
-  -  
+  - Install realsense_camera
+
 ##Usage
 Give execute permission to ~.sh 
 Run ~.sh 
