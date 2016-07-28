@@ -11,5 +11,11 @@
 
 ##Usage
 Give execute permission to ~.sh 
-Run ~.sh 
+Run ~.sh  
+
+chmod +x baxter_installer.sh  
+./baxter_installer.sh  
+
+chmod +x realsense_camera_installer.sh  
+./realsense_camera_installer.sh  
 
