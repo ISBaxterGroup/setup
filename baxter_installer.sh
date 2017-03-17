@@ -1,32 +1,32 @@
 #!/bin/bash
-echo "ros groovy install"
-sudo sh -c 'echo "deb http://packages.ros.org/ros/ubuntu precise main" > /etc/apt/sources.list.d/ros-latest.list'
+echo "ros indigo install"
+sudo sh -c 'echo "deb http://packages.ros.org/ros/ubuntu trusty main" > /etc/apt/sources.list.d/ros-latest.list'
 wget http://packages.ros.org/ros.key -O - | sudo apt-key add -
 sudo apt-get update
-sudo apt-get install ros-groovy-desktop-full
+sudo apt-get install ros-indigo-desktop-full
 sudo rosdep init
 rosdep update
 sudo apt-get install python-rosinstall
 
 echo "workspace setup"
 mkdir -p ~/ros_ws/src
-source /opt/ros/groovy/setup.bash
+source /opt/ros/indigo/setup.bash
 cd ~/ros_ws
 catkin_make
 catkin_make install
 
 echo "install baxter sdk"
 sudo apt-get update
-sudo apt-get install git-core python-argparse python-wstool python-vcstools python-rosdep ros-groovy-control-msgs ros-groovy-joystick-drivers
+sudo apt-get install git-core python-argparse python-wstool python-vcstools python-rosdep ros-indigo-control-msgs ros-indigo-joystick-drivers
 sudo apt-get update
-sudo apt-get install ros-groovy-baxter-sdk
+sudo apt-get install ros-indigo-baxter-sdk
 
 echo "wget baxter sh"
 wget https://github.com/RethinkRobotics/baxter/raw/master/baxter.sh
 chmod u+x baxter.sh
 
 echo "workspace setup"
-source /opt/ros/groovy/setup.bash
+source /opt/ros/indigo/setup.bash
 mkdir -p ~/catkin_ws/src
 cd ~/catkin_ws/src
 catkin_init_workspace
@@ -35,7 +35,7 @@ catkin_make #The catkin_make command is a convenience tool for working with catk
 catkin_make install  # (optionally)
 source devel/setup.bash
 
-echo "source /opt/ros/groovy/setup.bash" >> ~/.bashrc
+echo "source /opt/ros/indigo/setup.bash" >> ~/.bashrc
 echo "source ~/ros_ws/devel/setup.bash" >> ~/.bashrc
 echo "source ~/catkin_ws/devel/setup.bash" >> ~/.bashrc
 source ~/.bashrc
@@ -86,7 +86,7 @@ do
 done  
 echo "*************************************************************"
 echo "Rewrite ros_version in ~/ros_ws/baxter.sh line 30"
-echo "Our ros version is \"groovy\""
+echo "Our ros version is \"indigo\""
 echo "*************************************************************"
 echo -n "Did you end editing? [y/n] > "
 while :
@@ -94,7 +94,7 @@ do
   read INPUT
   case "$INPUT" in
     "y" ) break ;;
-    "n" ) echo "Rewrite ros_version to groovy";;
+    "n" ) echo "Rewrite ros_version to indigo";;
     * )   echo "input in [y/n]" ;;
   esac
 done  
