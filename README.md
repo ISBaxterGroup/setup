@@ -1,7 +1,7 @@
 # setup
 ##Script for setup
 - baxter_installer.sh
-  - Install ros-groovy  
+  - Install ros-indigo  
   - Install baxter-sdk  
   - Setup workspace  
   - Setup Baxter.sh  
